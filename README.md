@@ -4,20 +4,20 @@
 
 <div align="center">
 
-<a href="https://www.youtube.com/watch?v=QGplYmKxcGM"><img src="https://raw.githubusercontent.com/gintasz/neuralyzer/main/docs/readme_hero.jpg" alt="Neuralyzer — give AI agent tool to wipe its own session context (Men In Black style)" width="640" /></a>
+<a href="https://www.youtube.com/watch?v=QGplYmKxcGM"><img src="https://raw.githubusercontent.com/gintasz/neuralyzer/main/docs/readme_hero.jpg" alt="Neuralyzer — give an AI agent a tool to wipe its own session context (Men in Black style)" width="640" /></a>
 
 # 🕶️✨ Neuralyzer — make Ralph loops easier
 
 </div>
 
-Watch the first minute of [this video](https://www.youtube.com/watch?v=QGplYmKxcGM) as an introduction. This extension adds 1 tool for AI agent harnesses to call, named `neuralyzer` (no arguments). When this tool is called, all of the user & assistant messages in the session context are wiped and a copy of first message is sent again. Example:
+Watch the first minute of [this video](https://www.youtube.com/watch?v=QGplYmKxcGM) as an introduction. This extension adds 1 tool for AI agent harness to call, named `neuralyzer` (no arguments). When the tool is called, all user and assistant messages in the session context are wiped, and a copy of the first message is sent again. Example:
 
 ```
 USER: Hi, how are you?
 ASSISTANT: Good. How can I help?
 USER: Call neuralyzer tool
 
-🕶️✨ Neuralyzer flashed.
+🕶️✨ Neuralyzer has flashed.
 
 USER: Hi, how are you? [sent automatically]
 ASSISTANT: Ready to help!
@@ -27,7 +27,7 @@ ASSISTANT: No, never used.
 
 ## What's the point?
 
-Easier & more ergonomic loop engineering. Traditional Ralph loop is basically running this command in your command line: `while :; do cat PROMPT.md | pi -p ; done`, but you have to bother saving prompt to file, handling loop exit conditions, etc, or adapting your workflow to what a third-party tool/extension demands. The **loop controller** lives outside of the agent. This tool returns it back to the agent. You can just send a message to the agent with control flow as such, example:
+Easier and more ergonomic loop engineering. A traditional Ralph loop is basically running this command in your shell: `while :; do cat PROMPT.md | pi -p ; done`, but then you have to save the prompt to a file, handle loop exit conditions, or adapt your workflow to whatever a third-party tool or extension demands. The **loop controller** lives outside the agent. This tool gives it back to the agent. You can just send the agent a message with control flow like this:
 
 ```
 Check if @john has submitted a GitHub PR in this repo fixing authentication bug.
@@ -55,14 +55,14 @@ pi install npm:@gintasz/pi-neuralyzer
 <summary><b>OpenCode</b></summary>
 
 ```bash
-opencode plugin add @gintasz/opencode-neuralyzer
+opencode plugin @gintasz/opencode-neuralyzer
 ```
 </details>
 
 <details open>
 <summary><b>Claude Code</b></summary>
 
-No. As of 2026 June 20, Claude Code exposes no extension surface (hooks, skills, MCP, agents) that can wipe, fork, rewind, or rewrite session context mid-session. Fork (--fork-session) and /rewind exist but are startup-flag / interactive-human only — an agent cannot neuralyze itself.
+No. As of June 20, 2026, Claude Code exposes no extension surface (hooks, skills, MCP, agents) that can wipe, fork, rewind, or rewrite session context mid-session. Fork (`--fork-session`) and `/rewind` exist, but they are startup-flag / interactive-human only — an agent cannot neuralyze itself.
 </details>
 
 > Don't see your harness? Adding one is the most welcome kind of PR — see [CONTRIBUTING](https://github.com/gintasz/neuralyzer/blob/main/CONTRIBUTING.md).
