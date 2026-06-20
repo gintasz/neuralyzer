@@ -27,7 +27,7 @@ ASSISTANT: No, never used.
 
 ## What's the point?
 
-Easier loop engineering. Traditional Ralph loop is basically running this command in your command line: `while :; do cat PROMPT.md | pi -p ; done`, but you have to bother saving prompt to file, checking loop exit conditions, etc, or adapting your workflow to what a third-party tool/extension demands. With this tool, you can just send a message to the agent with control flow as such, example:
+Easier & more ergonomic loop engineering. Traditional Ralph loop is basically running this command in your command line: `while :; do cat PROMPT.md | pi -p ; done`, but you have to bother saving prompt to file, handling loop exit conditions, etc, or adapting your workflow to what a third-party tool/extension demands. The **loop controller** lives outside of the agent. This tool returns it back to the agent. You can just send a message to the agent with control flow as such, example:
 
 ```
 Check if @john has submitted a GitHub PR in this repo fixing authentication bug.
@@ -49,7 +49,28 @@ Pick your harness:
 ```bash
 pi install npm:@gintasz/pi-neuralyzer
 ```
+</details>
 
+<details open>
+<summary><b>OpenCode</b></summary>
+
+```bash
+opencode plugin add @gintasz/opencode-neuralyzer
+```
+</details>
+
+<details open>
+<summary><b>Claude Code</b></summary>
+
+No. As of 2026 June 20, Claude Code exposes no extension surface (hooks, skills, MCP, agents) that can wipe, fork, rewind, or rewrite session context mid-session. Fork (--fork-session) and /rewind exist but are startup-flag / interactive-human only — an agent cannot neuralyze itself.
 </details>
 
 > Don't see your harness? Adding one is the most welcome kind of PR — see [CONTRIBUTING](https://github.com/gintasz/neuralyzer/blob/main/CONTRIBUTING.md).
+
+---
+
+<p align="center">
+<a href="https://star-history.com/#gintasz/neuralyzer&Date">
+<img src="https://api.star-history.com/svg?repos=gintasz/neuralyzer&type=Date&theme=light" alt="Neuralyzer repository star history chart" width="640" />
+</a>
+</p>

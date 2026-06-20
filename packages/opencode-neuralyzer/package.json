@@ -1,0 +1,66 @@
+{
+  "name": "@gintasz/opencode-neuralyzer",
+  "version": "0.1.0",
+  "description": "AI agent harness tool allowing it to wipe its own session context and re-run the first message",
+  "keywords": [
+    "ai",
+    "agent",
+    "ai-agent",
+    "agentic-coding",
+    "harness",
+    "ralph-wiggum",
+    "ralph-loop",
+    "loop-engineering",
+    "context-window",
+    "context-engineering",
+    "opencode",
+    "opencode-plugin"
+  ],
+  "author": "Gintas Z.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gintasz/neuralyzer.git",
+    "directory": "packages/opencode-neuralyzer"
+  },
+  "homepage": "https://github.com/gintasz/neuralyzer#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "cp ../../README.md ./README.md && tsup",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo README.md"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.17.0",
+    "@opencode-ai/sdk": ">=1.17.0"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": {
+      "optional": true
+    },
+    "@opencode-ai/sdk": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@gintasz/neuralyzer-core": "*",
+    "@opencode-ai/plugin": "1.17.4",
+    "@opencode-ai/sdk": "1.17.4",
+    "tsup": "^8.5.1",
+    "zod": "^3.24.0"
+  }
+}

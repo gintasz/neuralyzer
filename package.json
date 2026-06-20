@@ -18,17 +18,16 @@
     "ai-agent",
     "agentic-coding",
     "harness",
-
     "ralph-wiggum",
     "ralph-loop",
     "loop-engineering",
-
     "context-window",
     "context-engineering",
-
     "pi",
     "pi-extension",
-    "pi-package"
+    "pi-package",
+    "opencode",
+    "opencode-plugin"
   ],
   "workspaces": [
     "packages/*"

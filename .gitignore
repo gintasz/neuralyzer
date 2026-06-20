@@ -7,6 +7,9 @@ dist/
 .env*
 .osgrep
 .serena/
+.pi/
+.opencode/
+opencode.json
 
 # Generated at pack/publish from the root README (single source of truth)
 packages/*/README.md
