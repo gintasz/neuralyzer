@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Runs the GitHub Actions build/test path in a clean Linux Docker checkout without touching local dependencies.
+# Purpose: catch Linux/GitHub Actions build failures locally without touching local dependencies.
 set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
