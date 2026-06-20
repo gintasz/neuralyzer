@@ -6,7 +6,7 @@
 
 <a href="https://www.youtube.com/watch?v=QGplYmKxcGM"><img src="https://raw.githubusercontent.com/gintasz/neuralyzer/main/docs/readme_hero.jpg" alt="Neuralyzer — give AI agent tool to wipe its own session context (Men In Black style)" width="640" /></a>
 
-# Neuralyzer — make Ralph loops easier
+# 🕶️✨ Neuralyzer — make Ralph loops easier
 
 </div>
 
