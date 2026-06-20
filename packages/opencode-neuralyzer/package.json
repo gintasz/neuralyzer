@@ -24,6 +24,12 @@
     "directory": "packages/opencode-neuralyzer"
   },
   "homepage": "https://github.com/gintasz/neuralyzer#readme",
+  "bugs": {
+    "url": "https://github.com/gintasz/neuralyzer/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -38,29 +44,21 @@
   ],
   "scripts": {
     "build": "cp ../../README.md ./README.md && tsup",
-    "clean": "rm -rf dist tsconfig.tsbuildinfo README.md"
+    "clean": "rm -rf dist tsconfig.tsbuildinfo README.md",
+    "prepack": "npm run build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.17.8"
+  },
   "peerDependencies": {
-    "@opencode-ai/plugin": ">=1.17.0",
-    "@opencode-ai/sdk": ">=1.17.0"
-  },
-  "peerDependenciesMeta": {
-    "@opencode-ai/plugin": {
-      "optional": true
-    },
-    "@opencode-ai/sdk": {
-      "optional": true
-    }
+    "@opencode-ai/plugin": ">=1.17.0"
   },
   "engines": {
     "node": ">=22"
   },
   "devDependencies": {
     "@gintasz/neuralyzer-core": "*",
-    "@opencode-ai/plugin": "1.17.4",
-    "@opencode-ai/sdk": "1.17.4",
-    "tsup": "^8.5.1",
-    "zod": "^3.24.0"
+    "@opencode-ai/sdk": "1.17.8",
+    "tsup": "^8.5.1"
   }
 }

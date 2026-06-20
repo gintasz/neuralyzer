@@ -38,7 +38,8 @@
     "test:unit": "vitest run --exclude '**/e2e.test.ts'",
     "test:e2e": "vitest run e2e.test",
     "test:watch": "vitest",
-    "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo"
+    "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo",
+    "ci:docker": "bash scripts/ci-docker.sh"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
