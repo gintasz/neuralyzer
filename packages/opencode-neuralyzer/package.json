@@ -1,6 +1,6 @@
 {
   "name": "@gintasz/opencode-neuralyzer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI agent harness tool allowing it to wipe its own session context and re-run the first message",
   "keywords": [
     "ai",
