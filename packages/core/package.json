@@ -1,0 +1,30 @@
+{
+  "name": "@gintasz/neuralyzer-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Harness-agnostic shared types and utilities for neuralyzer AI agent extension",
+  "author": "Gintas Z.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gintasz/neuralyzer.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/gintasz/neuralyzer#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  }
+}

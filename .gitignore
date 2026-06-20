@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+*.tsbuildinfo
+.cache/
+
+.env*
+.osgrep
+.serena/
+
+# Generated at pack/publish from the root README (single source of truth)
+packages/*/README.md

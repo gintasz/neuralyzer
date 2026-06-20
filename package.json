@@ -1,0 +1,49 @@
+{
+  "name": "neuralyzer-monorepo",
+  "private": true,
+  "description": "AI agent harness tool allowing it to wipe its own session context and re-run the first message",
+  "author": "Gintas Z.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gintasz/neuralyzer.git"
+  },
+  "homepage": "https://github.com/gintasz/neuralyzer#readme",
+  "bugs": {
+    "url": "https://github.com/gintasz/neuralyzer/issues"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "ai-agent",
+    "agentic-coding",
+    "harness",
+
+    "ralph-wiggum",
+    "ralph-loop",
+    "loop-engineering",
+
+    "context-window",
+    "context-engineering",
+
+    "pi",
+    "pi-extension",
+    "pi-package"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @gintasz/neuralyzer-core && npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "test:unit": "vitest run --exclude '**/e2e.test.ts'",
+    "test:e2e": "vitest run e2e.test",
+    "test:watch": "vitest",
+    "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

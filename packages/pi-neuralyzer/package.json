@@ -1,0 +1,67 @@
+{
+  "name": "@gintasz/pi-neuralyzer",
+  "version": "0.1.0",
+  "description": "AI agent harness tool allowing it to wipe its own session context and re-run the first message",
+  "keywords": [
+    "ai",
+    "agent",
+    "ai-agent",
+    "agentic-coding",
+    "harness",
+    "ralph-wiggum",
+    "ralph-loop",
+    "loop-engineering",
+    "context-window",
+    "context-engineering",
+    "pi",
+    "pi-extension",
+    "pi-package"
+  ],
+  "author": "Gintas Z.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gintasz/neuralyzer.git",
+    "directory": "packages/pi-neuralyzer"
+  },
+  "homepage": "https://github.com/gintasz/neuralyzer#readme",
+  "bugs": {
+    "url": "https://github.com/gintasz/neuralyzer/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "pi": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "scripts": {
+    "build": "cp ../../README.md ./README.md && tsup",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo README.md"
+  },
+  "dependencies": {
+    "typebox": "^1.2.8"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.79.0"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": ">=0.79.0",
+    "@earendil-works/pi-coding-agent": ">=0.79.0",
+    "@gintasz/neuralyzer-core": "*",
+    "tsup": "^8.5.1"
+  }
+}
